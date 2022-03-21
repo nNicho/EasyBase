@@ -1,4 +1,4 @@
-![EasyBase(1)](https://user-images.githubusercontent.com/83515055/159334919-528255d5-26f0-4a14-b008-912316b45afb.png)
+![EasyBasetext](https://user-images.githubusercontent.com/83515055/159348942-5fd0bc21-e1df-4c5d-a186-048ba61b3668.png)
 
 # EasyBase
 A Forge utility mod base for 1.12.2
