@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
 
+//ClickGUI frame class that handles buttons
 public class Frame {
 	
 	ArrayList<Button> buttons = new ArrayList<>();

@@ -8,6 +8,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
+//Base ClickGUI class that handles frames
 public class ClickGUIScreen extends GuiScreen {
 	
 	ArrayList<Frame> frames = new ArrayList<>();

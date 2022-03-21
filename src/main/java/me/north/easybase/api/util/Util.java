@@ -4,6 +4,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.util.text.TextComponentString;
 
+//Utilities for making things easier
 public class Util implements Wrapper {
 	
 	public static void sendMsg(String message) {

@@ -1,5 +1,6 @@
 package me.north.easybase.api.event;
 
+//Event base class
 public class Event {
 	
 	 public boolean cancelled;

@@ -6,6 +6,7 @@ import me.north.easybase.api.module.Category;
 import me.north.easybase.api.module.Module;
 import me.north.easybase.impl.clickgui.ClickGUIScreen;
 
+//Initializes the ClickGUI
 public class ClickGUI extends Module {
 
 	public ClickGUI() {

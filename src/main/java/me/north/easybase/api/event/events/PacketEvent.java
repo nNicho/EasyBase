@@ -4,6 +4,8 @@ import net.minecraft.network.Packet;
 import net.minecraftforge.fml.common.eventhandler.Cancelable;
 import net.minecraftforge.fml.common.eventhandler.Event;
 
+
+//Packet event
 @Cancelable
 public class PacketEvent extends Event {
     private final Packet<?> packet;

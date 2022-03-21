@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 
-//Main class
+//Main class where everything is handled
 @Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 public class Main {
 	
