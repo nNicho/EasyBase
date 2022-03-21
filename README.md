@@ -11,3 +11,7 @@ A Forge utility mod base for 1.12.2
 2. Run `gradlew clean`
 3. Run `gradlew setupDecompWorkspace`
 4. Open folder in IDE of choice
+
+# Building
+
+1. Run `gradlew build`
