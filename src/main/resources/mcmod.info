@@ -1,0 +1,16 @@
+[
+{
+  "modid": "easybase",
+  "name": "EasyBase",
+  "description": "Base for a utility mod.",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["North"],
+  "credits": "The Forge and FML guys",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
