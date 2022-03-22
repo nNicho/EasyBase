@@ -1,4 +1,4 @@
-![EasyBasetext](https://user-images.githubusercontent.com/83515055/159348942-5fd0bc21-e1df-4c5d-a186-048ba61b3668.png)
+![EasyBase](https://user-images.githubusercontent.com/83515055/159556928-ed54efa2-b3a7-41db-85a0-be484cf49bec.png)
 
 # EasyBase
 EasyBase is a 1.12.2 Forge utility mod base made for people who want to start making utility mods/clients. The goal is to make it easier and more accessible
