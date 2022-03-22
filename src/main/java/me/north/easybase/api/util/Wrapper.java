@@ -9,7 +9,7 @@ public interface Wrapper {
     Minecraft mc = Minecraft.getMinecraft();
 
     default boolean nullCheck() {
-        return mc.player != null || mc.world != null;
+        return mc.player == null || mc.world == null;
     }
 
     default Main getMain() {

@@ -1,36 +1,27 @@
 package me.north.easybase.api.module;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import me.north.easybase.impl.Main;
 import me.north.easybase.impl.modules.*;
 
 //Manages modules
 public class ModuleManager {
 	
-	public ArrayList<Module> modules;
+	private ArrayList<Module> modules;
 	
-	//Initialize modules here:
+	//Initialize modules here
 	public ModuleManager() {
 		modules = new ArrayList<>();
-		
-		//COMBAT
-		
-		//MISC
-		
-		//MOVEMENT
-		
-		//PLAYER
-		
-		//RENDER
-		
-		//CLIENT
+
+		//
 		modules.add(new ExampleModule());
 		modules.add(new ClickGUI());
+		//
+		
+		modules.sort(this::sortABC);
 	}
 	
-	public Module getModuleName(String name) {
+	public Module getModuleByName(String name) {
 		for(Module m : this.modules) {
 			if(m.getName().equalsIgnoreCase(name)) {
 				return m;
@@ -39,18 +30,22 @@ public class ModuleManager {
 		return null;
 	}
 	
+	private int sortABC(Module module1, Module module2) {
+		return module1.getName().compareTo(module2.getName());
+	}
+	
 	public ArrayList<Module> getModules() {
 		return this.modules;
 	}
 	
-	public static List<Module> getModulesByCategory(Category c) {
-		List<Module> modules = new ArrayList<Module>();
+	public ArrayList<Module> getModulesByCategory(Category c) {
+		final ArrayList<Module> modulesList = new ArrayList<>();
 		
-		for(Module m : Main.INSTANCE.getModuleManager().modules) {
+		for(Module m : modules) {
 			if(m.getCategory() == c)
-				modules.add(m);
+				modulesList.add(m);
 		}
-		return modules;
+		return modulesList;
 	}
 
 }

@@ -19,7 +19,7 @@ public class Main {
 	
     public static final String MODID = "easybase";
     public static final String NAME = "EasyBase";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.1";
 
     @Instance
     public static Main INSTANCE;

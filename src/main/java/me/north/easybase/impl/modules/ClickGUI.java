@@ -11,7 +11,7 @@ public class ClickGUI extends Module {
 
 	public ClickGUI() {
 		super("ClickGUI", "Initializes the ClickGUI", Category.CLIENT);
-		this.setKey(Keyboard.KEY_RSHIFT);
+		this.setKeybind(Keyboard.KEY_RSHIFT);
 	}
 	
 	@Override

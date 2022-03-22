@@ -5,7 +5,6 @@ import org.lwjgl.input.Keyboard;
 import me.north.easybase.api.module.Module;
 import me.north.easybase.api.util.Wrapper;
 import me.north.easybase.impl.Main;
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -29,7 +28,7 @@ public class EventManager implements Wrapper {
     
     @SubscribeEvent
     public void onLivingUpdate(LivingEvent.LivingUpdateEvent event) {
-        if(nullCheck() && event.getEntity() == mc.player) {
+        if(!nullCheck() && event.getEntity() == mc.player) {
             for (Module m : Main.INSTANCE.getModuleManager().getModules()) {
                 if(m.isToggled()) {
                     m.onUpdate();
@@ -40,7 +39,7 @@ public class EventManager implements Wrapper {
     
     @SubscribeEvent
 	public void onKey(InputEvent.KeyInputEvent e) {
-		if(Minecraft.getMinecraft().world == null || Minecraft.getMinecraft().player == null)
+		if(nullCheck())
 			return;
 		try {
 			if(Keyboard.isCreated()) {
@@ -49,7 +48,7 @@ public class EventManager implements Wrapper {
 					if(keyCode <= 0)
 						return;
 					for(Module m : Main.INSTANCE.getModuleManager().getModules()) {
-						if(m.getKey() == Keyboard.getEventKey()) {
+						if(m.getKeybind() == Keyboard.getEventKey()) {
 							m.toggle();
 						}
 					}

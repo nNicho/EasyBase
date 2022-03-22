@@ -8,32 +8,30 @@ import me.north.easybase.api.module.Category;
 import me.north.easybase.api.module.Module;
 import me.north.easybase.api.util.Util;
 
-//Class that extends Module:
+//Class that extends Module
 public class ExampleModule extends Module {
 
-	//Constructor:
+	//Constructor
 	public ExampleModule() {
 		super("ExampleModule", "An example description", Category.CLIENT);
 		
-		//Keybind to toggle module:
-		this.setKey(Keyboard.KEY_X);
+		//Keybind to toggle module
+		this.setKeybind(Keyboard.KEY_NONE);
 	}
 	
-	//When module gets enabled:
+	//When module gets enabled
 	@Override
 	public void onEnable() {
-		System.out.println("ENABLED");
 		Util.sendMsg(ChatFormatting.WHITE + this.name + ChatFormatting.GREEN + " enabled!");
 	}
 	
-	//When module gets disabled:
+	//When module gets disabled
 	@Override
 	public void onDisable() {
-		System.out.println("DISABLED!");
 		Util.sendMsg(ChatFormatting.WHITE + this.name + ChatFormatting.RED + " disabled!");
 	}
 	
-	//When module updates:
+	//When module updates
 	@Override
 	public void onUpdate() {
 		if(nullCheck())
