@@ -22,13 +22,13 @@ public class ExampleModule extends Module {
 	//When module gets enabled
 	@Override
 	public void onEnable() {
-		Util.sendMsg(ChatFormatting.WHITE + this.name + ChatFormatting.GREEN + " enabled!");
+		Util.sendMsg(ChatFormatting.WHITE + this.getName() + ChatFormatting.GREEN + " enabled!");
 	}
 	
 	//When module gets disabled
 	@Override
 	public void onDisable() {
-		Util.sendMsg(ChatFormatting.WHITE + this.name + ChatFormatting.RED + " disabled!");
+		Util.sendMsg(ChatFormatting.WHITE + this.getName() + ChatFormatting.RED + " disabled!");
 	}
 	
 	//When module updates

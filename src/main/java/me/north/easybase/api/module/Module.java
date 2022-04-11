@@ -12,11 +12,11 @@ public class Module implements Wrapper, Toggleable {
 	
 	protected final Minecraft mc = Minecraft.getMinecraft();
 	
-	public String name;
-	public String description;
+	private String name;
+	private String description;
 	private int keybind;
 	private Category category;
-	public boolean toggled;
+	private boolean toggled;
 	
 	public Module(String name, String description, Category category) {
 		this.name = name;
@@ -24,6 +24,10 @@ public class Module implements Wrapper, Toggleable {
 		this.category = category;
 		this.toggled = false;
 		this.keybind = Keyboard.KEY_NONE;
+	}
+	
+	public String getName() {
+		return name;
 	}
 
 	public String getDescription() {
@@ -40,6 +44,10 @@ public class Module implements Wrapper, Toggleable {
 	
 	public void setKeybind(int keybind) {
 		this.keybind = keybind;
+	}
+	
+	public Category getCategory() {
+		return category;
 	}
 	
 	public boolean isToggled() {
@@ -72,14 +80,6 @@ public class Module implements Wrapper, Toggleable {
 	
 	public void onDisable() {
 		MinecraftForge.EVENT_BUS.unregister(this);
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-	
-	public Category getCategory() {
-		return this.category;	
 	}
 	
 	public void onUpdate() {}
