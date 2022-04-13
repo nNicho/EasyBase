@@ -18,7 +18,15 @@ public class ModuleManager {
 		modules.add(new ClickGUI());
 		//
 		
-		modules.sort(this::sortABC);
+		modules.sort(this::sortAlphabetically);
+	}
+	
+	private int sortAlphabetically(Module module1, Module module2) {
+		return module1.getName().compareTo(module2.getName());
+	}
+	
+	public ArrayList<Module> getModules() {
+		return this.modules;
 	}
 	
 	public Module getModuleByName(String name) {
@@ -28,14 +36,6 @@ public class ModuleManager {
 			}
 		}
 		return null;
-	}
-	
-	private int sortABC(Module module1, Module module2) {
-		return module1.getName().compareTo(module2.getName());
-	}
-	
-	public ArrayList<Module> getModules() {
-		return this.modules;
 	}
 	
 	public ArrayList<Module> getModulesByCategory(Category c) {

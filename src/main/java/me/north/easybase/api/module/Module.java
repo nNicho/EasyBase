@@ -34,8 +34,8 @@ public class Module implements Wrapper, Toggleable {
 		return description;
 	}
 	
-	public void setDescription(String description) {
-		this.description = description;
+	public Category getCategory() {
+		return category;
 	}
 	
 	public int getKeybind() {
@@ -44,10 +44,6 @@ public class Module implements Wrapper, Toggleable {
 	
 	public void setKeybind(int keybind) {
 		this.keybind = keybind;
-	}
-	
-	public Category getCategory() {
-		return category;
 	}
 	
 	public boolean isToggled() {
